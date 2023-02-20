@@ -4,6 +4,7 @@ body{
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   overflow-x: hidden;
+  height: 90000px;
 }
 
 h1,h2,h3{
@@ -144,4 +145,110 @@ header{
   z-index: -1;
   bottom: 0;
   margin-left: 200px;
+}
+
+/* features */
+
+.features-container{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.features-container > div > .subtitle{
+  margin-bottom: 40px;
+}
+
+.subtitle{
+  font-size: 36px;
+}
+
+.features-container .paragraph{
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.features-list{
+  display: flex;
+  justify-content: center;
+} 
+
+.features-list li{
+  padding: 20px;
+  border-bottom: 1px solid hsl(229, 31%, 90%);
+  cursor: pointer;
+  transition: .3s;
+  color: hsl(229, 8%, 60%);
+}
+
+.features-list li.active{
+  border-bottom: 4px solid hsl(0, 94%, 66%);
+  color: hsl(229, 31%, 21%);
+}
+
+.features-list li:hover{
+  color: hsl(0, 94%, 66%);
+}
+
+/* feature item */
+
+.feature{
+  padding-top: 90px;
+  display: flex;
+  gap: 40px;
+  text-align: start;
+  justify-content: center;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+}
+
+.feature.active{
+  visibility: visible;
+  opacity: 1;
+}
+
+.feature::after{
+  content: '';
+  width: 4000px;
+  height: 400px;
+  background-color: hsl(231, 69%, 60%);
+  position: absolute;
+  z-index: -1;
+  right: 55%;
+  bottom: -120px;
+  border-radius: 0px 400px 400px 0px;
+}
+
+.feature-description{
+  align-self: center;
+}
+
+.feature-description > .subtitle{
+  margin-bottom: 20px;
+}
+
+.feature-description .paragraph{
+  margin-bottom: 40px;
+  width: 450px;
+}
+
+.feature-description a{
+  padding: 17px 30px;
+  background-color: hsl(231, 69%, 60%);
+  border: 1px solid hsl(231, 69%, 60%);
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0px 8px 8px -4px hsl(229, 31%, 90%);
+  transition: .3s;
+}
+
+.feature-description a:hover{
+  background-color: #fff;
+  color: hsl(231, 69%, 60%);
+  box-shadow: 0px 0px 8px -8px hsl(229, 31%, 90%);
 }
