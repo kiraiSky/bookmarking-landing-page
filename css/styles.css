@@ -3,6 +3,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 
 h1,h2,h3{
@@ -82,6 +83,8 @@ header{
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 90px 40px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .left-box h1{
@@ -131,13 +134,14 @@ header{
   position: relative;
 }
 
-.shape-bg{
-  position: absolute;
+.right-box::after{
+  content: '';
   height: 400px;
-  width: 500px;
-  border-radius: 400px 0px 0px 400px;
+  width: 4000px;
+  position: absolute;
   background-color: hsl(231, 69%, 60%);
-  right: 0;
-  bottom: -100px;
+  border-radius: 400px 0px 0px 400px;
   z-index: -1;
+  bottom: 0;
+  margin-left: 200px;
 }
