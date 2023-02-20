@@ -196,19 +196,15 @@ header{
 
 .feature{
   padding-top: 90px;
-  display: flex;
   gap: 40px;
   text-align: start;
   justify-content: center;
   position: relative;
-  visibility: hidden;
-  opacity: 0;
-  transition: 1s;
+  display: none;
 }
 
 .feature.active{
-  visibility: visible;
-  opacity: 1;
+  display: flex;
 }
 
 .feature::after{
